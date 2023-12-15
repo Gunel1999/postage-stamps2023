@@ -391,8 +391,14 @@ footer img {
     grid-template-columns: 1fr 1fr;
   }
 
+  .slide-img {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .slide-img img {
-    width: 120%;
+    width: 100%;
     object-fit: cover;
   }
 
