@@ -1,8 +1,8 @@
 let currentSlide = 0;
 let isTransitioning = false;
 
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".stamp-slide");
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.stamp-slide');
 const totalSlides = slides.length;
 
 function showSlide(index) {
@@ -24,7 +24,7 @@ function changeSlide(direction) {
     showSlide(currentSlide + direction);
 
     slider.addEventListener(
-      "transitionend",
+      'transitionend',
       () => {
         isTransitioning = false;
       },
@@ -33,11 +33,11 @@ function changeSlide(direction) {
   }
 }
 
-document.querySelector(".prev").addEventListener("click", () => {
+document.querySelector('.prev').addEventListener('click', () => {
   changeSlide(-1);
 });
 
-document.querySelector(".next").addEventListener("click", () => {
+document.querySelector('.next').addEventListener('click', () => {
   changeSlide(1);
 });
 
@@ -45,20 +45,20 @@ document.querySelector(".next").addEventListener("click", () => {
 //   changeSlide(1);
 // }, 15000);
 
-const menuBar = document.querySelector(".fa-bars");
-const mobileMenu = document.querySelector(".mobile-nav");
+const menuBar = document.querySelector('.fa-bars');
+const mobileMenu = document.querySelector('.mobile-nav');
 
-menuBar.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+menuBar.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
 });
 
-document.addEventListener("click", (e) => {
+document.addEventListener('click', e => {
   const targetElement = e.target;
 
   if (
-    !targetElement.closest(".mobile-nav") &&
-    !targetElement.classList.contains("fa-bars")
+    !targetElement.closest('.mobile-nav') &&
+    !targetElement.classList.contains('fa-bars')
   ) {
-    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.add('hidden');
   }
 });
