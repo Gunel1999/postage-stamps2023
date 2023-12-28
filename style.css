@@ -8,6 +8,10 @@
   --blue: #003e6d;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -103,7 +107,7 @@ main {
 }
 
 #info::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
